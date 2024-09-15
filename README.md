@@ -11,7 +11,7 @@ In this menu you will be given the option to extract any file of choice, upon ex
 
 ## Usage
 
-Install by placing `MutCacheExtractor.u` and `MutCacheExtractor.ucl` in your `/UT2004Root/System/` directory.
+Install by moving the `MutCacheExtractor.u` and `MutCacheExtractor.ucl` files to your `/UT2004Root/System/` directory.
 
 The mutator should appear in the mutators menu as "Cache Extractor"
 
