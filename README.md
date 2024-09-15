@@ -1,14 +1,31 @@
 # Cache Extractor Mutator for Unreal Tournament 2004
 
-Cache Extractor is a mutator for Unreal Tournament 2004 that provides a user friendly in-game menu allowing you to easily extract files from your cache(downloaded files) folder to their corresponding folder e.g. Textures will go into \Textures\FILENAME.utx, so that you can easily play using the files you have downloaded from an online server.
+Cache Extractor is a mutator for Unreal Tournament 2004 that brings the ability to extract cache files right from within the game itself. Even during online-play!
 
 ![image](https://github.com/user-attachments/assets/9977d3f9-c6a3-4f45-a54c-dd490129233d)
 
-The menu provides a list of all the cache files found in your \Cache\ folder and their GUID. You can simply select a file and then click the Extract File button to automatically extract the selected file.$teaser
-Notes
+The mutator adds a new tab page to the "mid game menu" labeled as "Cache Manager"
 
-If the selected file to extract turns black/dark then this means the file was not successfully extracted possibly the file didn't exist anymore, but was still present in the \UT2004\Cache\cache.inifile. Beware of files that are in-use, attempting to extract those may result in a game crash!
-Install
+The new page provides a list of all the cache files that can be found in the `/UT2004Root/Cache/` directory.
+In this menu you will be given the option to extract any file of choice, upon extraction the selected will be moved to its appropriate directory.
 
-For players: Just extract the files to \System\ along with the .ucl file.
-For admins: Either add MutCacheExtractor.CacheServerActor to the ServerActors list in your UT2004.ini file; or add MutCacheExtractor.MutCacheExtractor to your server launching parameters and mutators list.
+## Usage
+
+Install by placing `MutCacheExtractor.u` and `MutCacheExtractor.ucl` in your `/UT2004Root/System/` directory.
+
+The mutator should appear in the mutators menu as "Cache Extractor"
+
+Server admins can do the following:
+
+Enable the mutator by appending `MutCacheExtractor` to your server's mutator option e.g.
+```bat
+?Mutator=MutCacheExtractor.MutCacheExtractor
+```
+
+Or alternatively add the following line `ServerActors=MutCacheExtractor.CacheServerActor` under section `[Engine.GameEngine]` of your `UT2004.ini` file.
+
+
+## Caveats
+
+1. If the row becomes darkened then the extraction failed, possibly the file may no longer exist in the `/UT2004Root/Cache/` directory.
+2. The game crashed upon extraction then the attempted package may possibly have still been in-use.
