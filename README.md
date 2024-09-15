@@ -7,7 +7,7 @@ Cache Extractor is a mutator for Unreal Tournament 2004 that brings the ability 
 The mutator adds a new tab page to the "mid game menu" labeled as "Cache Manager"
 
 The new page provides a list of all the cache files that can be found in the `/UT2004Root/Cache/` directory.
-In this menu you will be given the option to extract any file of choice, upon extraction the selected will be moved to its appropriate directory.
+In this menu you will be given the option to extract any file of choice, upon extraction the selected file will be moved to its appropriate directory.
 
 ## Usage
 
@@ -28,4 +28,4 @@ Or alternatively add the following line `ServerActors=MutCacheExtractor.CacheSer
 ## Caveats
 
 1. If the row becomes darkened then the extraction failed, possibly the file may no longer exist in the `/UT2004Root/Cache/` directory.
-2. The game crashed upon extraction then the attempted package may possibly have still been in-use.
+2. The game crashed upon extraction then the attempted file may possibly have still been in-use.
